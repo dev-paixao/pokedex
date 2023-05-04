@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="16x16"  href="./img/icons/favicon-16x16.png">
-    <link rel="stylesheet" href="./css/style.css">
-
     <title>Pokédex</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-<main>
-    <section id="main-content">
-    <img src="img/pokedex.png" alt="Imagem da Pokédex" class="pokedex">
-    <img src="https://www.pngmart.com/files/22/Spheal-Pokemon-PNG.gif" alt="Imagem do Pokemon" class="pokemon-class">
+    <main>
+        <section id="main-content">
 
-    <h1 class="pokemon-data">
-        <span class="pokemon-id">0363</span> -
-        <span class="pokemon-name">spheal</span>
-    </h1>
+            <form class="form">
+                <label for="input-search" class="visually-hidden">Pesquise o Pokémon pelo nome ou número
+                </label>
+                <input type="search" id="input-search" class="input-search" placeholder="Pesquise o nome ou número" required/>
+                <button type="submit" class="btn-search"><img src="img/icons/favicon-16x16.png" alt=""></button>
+            </form>
 
-    <form class="form">
-        <input type="search" class="input-search" placeholder="name or number" required/>
-    </form>
+            <div class="buttons">
+                <button class="button btn-prev">Anterior</button>
+                <button class="button btn-next">Próximo</button>
+            </div>
 
-    <div class="buttons">
-        <button class="button btn-prev"> Proximo &lt;</button>
-        <button class="button btn-prev"> anterior &gt;</button>
-    </div>
+            <img src="#" alt="Imagem do Pokemon" class="pokemon-img">
+            <div class="pokemon-data">
+                <h1>
+                    <span class="pokemon-id"></span> -
+                    <span class="pokemon-name"></span>
+                </h1>
+                
+                <h2>Evoluções</h2>
+                <p class="pokemon-evolution"></p>
 
+                <h2>Habilidades</h2>
+                <div class="pokemon-abilities">
+                    <ul class="ability-list">
+                    </ul>
+                </div>
 
-    </section>
-</main>
-    
+                <h2>Tipo</h2>
+                <div class="pokemon-types">
+                    <ul class="type-list">
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
 </body>
 </html>
