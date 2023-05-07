@@ -28,11 +28,11 @@ Para utilizar a aplicação, basta clonar o repositório para a sua máquina e a
 
 Contribuições são bem-vindas! Para contribuir, basta fazer um fork do repositório, criar uma nova branch com a sua implementação e enviar um pull request para a branch principal do repositório. Certifique-se de seguir as guidelines de contribuição descritas no arquivo CONTRIBUTING.md.
 
+## :rocket: Acesse o projeto
+
 ## [Clique aqui](https://dev-paixao.github.io/portfolio/)
 
 # :rocket: Prévia do projeto
-
-![Preview](./img/preview.gif)
 
 ## Licença
 
