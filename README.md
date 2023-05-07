@@ -30,9 +30,9 @@ Contribuições são bem-vindas! Para contribuir, basta fazer um fork do reposit
 
 ## :rocket: Acesse o projeto
 
-## [Clique aqui](https://dev-paixao.github.io/portfolio/)
+## [Clique aqui](https://dev-paixao.github.io/pokedex/)
 
-# :rocket: Prévia do projeto
+## Prévia do projeto
 
 ## Licença
 
