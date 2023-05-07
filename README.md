@@ -34,6 +34,8 @@ Contribuições são bem-vindas! Para contribuir, basta fazer um fork do reposit
 
 ## Prévia do projeto
 
+![Preview](./img/preview.gif)
+
 ## Licença
 
 Essa aplicação está licenciada sob a licença MIT. Veja o arquivo LICENSE.md para mais informações.
