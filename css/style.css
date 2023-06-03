@@ -21,48 +21,6 @@
     min-height: 100vh;
   }
 
-/*cabecalho*/
-.cabecalho{
-  background-color: #2c3e50;
-  min-height: 10vh;
-}
-
-.cabecalho-img {
-  width: 5%;
-  border-radius: 40%;
-  max-width: 700px;
-  margin: 30px;
-  box-shadow: 0px 10px 13px -7px #1e2a36, 5px 5px 15px 5px rgba(0,0,0,0);
-}
-
-.logo-responsive{
-  display: none;
-
-}
-
-.header-items{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.cabecalho-menu {
-  display: flex;
-  gap: 60px;
-}
-
-.cabecalho-menu-item {
-  color: #ffffff;
-  font-weight: 400px;
-  font-size: max(16px, 1.5vw);
-}
-
-.cabecalho-menu-item:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
   #main-content {
     display: flex;
     flex-direction: column;
@@ -81,11 +39,20 @@
   .title_content{
     font-size: max(14px, 3vw);
   }
-/*cabecalho*/
+
+#form-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 350px;
+}
+
   .form {
-    margin-top: 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
   
   .visually-hidden {
@@ -93,18 +60,18 @@
     width: 1px;
     height: 1px;
     margin: -1px;
-    padding: 100px;
+    padding: 10px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
   
   .input-search {
-    padding: 2vw 8vw;
+    padding: 0.8vw 6vw;
     margin: 10px;
     box-sizing: border-box;
-    border-radius: 23px 6px;
-    font-size: max(8px, 1.5vw);
+    border-radius: 30px;
+    font-size: max(8px, 1vw);
     flex-grow: 1;
   }
   
@@ -118,22 +85,28 @@
   }
 
  .icon-search{
-    width: 6vw;
+    width: 2vw;
   }
 
   .btn-search:hover {
     background-color: #2c3e50;
   }
-  
+
+  #result-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .buttons {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
-    gap: 2vw;
+    justify-content: space-between;
+    
   }
   
   .button {
-    padding: 10px 4vw;
+    padding: 0.1vw 3vw;
     background-color: #1f2d3d;
     color: #fff;
     border: none;
@@ -147,9 +120,18 @@
     background-color: #2c3e50;
   }
   
+  .image-content{
+    border-radius: 20px;
+    border: solid 1px #1e2a36;
+    box-shadow: 5px 10px #22303d;
+    padding: 20px;
+    
+  }
+
   .pokemon-img {
-    width: 100%;
-    max-width: 150px;
+    width: 80vw;
+    max-width: 250px;
+    padding: 50px;
     height: auto;
     margin-bottom: 20px;
     object-fit: cover; /* Evita distorção da imagem */
@@ -163,6 +145,8 @@
     flex-direction: column;
     align-items: center;
   }
+
+
 
   .title-item{
     margin-top: 14px;
@@ -237,123 +221,3 @@
     font-size: max(8px, 1.2vw);
 
   }
-    
- /*responsividade*/
-
- @media (max-width: 630px) {
-
-  .header-items{
-      display: none;
-  }
-
-  header .top{
-      display: none;
-  }
-
-  .menu-responsive{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-
-  .logo-responsive{
-      display: flex;
-      max-width: 700px;
-      width: 7%;
-      margin: 30px;
-      border-radius: 40%;
-      box-shadow: 0px 10px 13px -7px #1e2a36, 5px 5px 15px 5px rgba(0,0,0,0);
-  
-  }
-
-  .button-contacte {
-      margin-top: 2vh;
-  }
-  
-  .one,
-  .two,
-  .three {
-      background-color: #fff;
-      height: 2px;
-      width: 60%;
-      margin: 5px auto;
-      transition-duration: 0.3s;
-  }
-
-  .menu-toggle{
-      width: 40px;
-      height: 30px;
-  }
-
-  .cabecalho .menu-toggle{
-      position: absolute;
-      right: -4vw;
-      margin-right: 10vw;
-      top: 3vh;
-  }
-
-  /*fullscren*/
-
-  .logo-responsive.off{
-      opacity: 0%;
-  }
-
-  .container.on{
-      margin-top: 120vh;
-  }
-
-
-  .cabecalho.on{
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100vw;
-      height: 100vh;
-
-      z-index: 10;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .cabecalho.on .header-items{
-      display: flex;
-      flex-direction: column;
-      margin-top: 25vh;
-  }
-
-  .cabecalho.on .cabecalho-menu{
-      display: flex;
-      flex-direction: column;
-      line-height: 1rem;
-      text-align: center;
-  }
-
-  .cabecalho-menu-item{
-      font-size: 5vw;
-  }
-
-  .cabecalho.on .menu-toggle{
-      position: absolute;
-      right: -4vw;
-      margin-right: 10vw;
-      top: 3vh;
-  }
-
-  .cabecalho.on .menu-toggle .one{
-      transform: rotate(45deg) translate(7px, 7px);
-  }
-
-  .cabecalho.on .menu-toggle .two{
-      opacity: 0;
-  }
-
-  .cabecalho.on .menu-toggle .three{
-      transform: rotate(-45deg) translate(3px, -4px);
-  }
-
-  .cabecalho.on .cabecalho-img{
-      width: 10%;
-  }
-
-}
