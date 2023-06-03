@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="./img/icons/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>PokeGuide</title>
 </head>
 <body>
@@ -16,10 +16,10 @@
                 <h1 class="title_content">PokeGuide</h1>
 
                 <form class="form">
-                    <input type="search" id="input-search" class="input-search" placeholder="Pesquise o nome ou número" required/>
+                    <input type="search" id="input-search" class="input-search" placeholder="Pesquise o nome ou número" required aria-label="Pesquisar Pokémon" />
 
-                    <button type="submit" class="btn-search">
-                        <img class="icon-search" src="img/Poké_Ball_icon.svg.png" alt="">
+                    <button type="submit" class="btn-search" aria-label="Pesquisar">
+                        <img class="icon-search" src="img/Poké_Ball_icon.svg.png" alt="Ícone de Pesquisa" />
                     </button>
                 </form>
             </section>
@@ -32,16 +32,17 @@
                         <button class="button btn-next">&gt;</button>
                     </div>
 
-                    <img src="#" alt="Imagem do Pokemon" class="pokemon-img">
+                    <img src="#" alt="Imagem do Pokemon" class="pokemon-img" aria-describedby="pokemon-description" />
+                    <p id="pokemon-description" class="sr-only">Imagem do Pokemon</p>
                 </div>
 
                 <div class="pokemon-data">
 
                     <div class="name-pokemon">
-                        <h1>
+                        <h2>
                             <span class="pokemon-id"></span> -
                             <span class="pokemon-name"></span>
-                        </h1>
+                        </h2>
 
                         <div class="pokemon-types">
                             <ul class="type-list"></ul>
@@ -69,7 +70,7 @@
                             </div>
                             
                         </div>
-                      </div>
+                    </div>
 
                     <div>
                         
@@ -86,8 +87,7 @@
             </section>
 
             <section id="evolution-section">
-                <h2 class="title-item"><i class="fa-solid fa-arrow-right"></i></i>
-                </i>Evoluções</h2>
+                <h2 class="title-item"><i class="fa-solid fa-arrow-right"></i>Evoluções</h2>
                 <div class="pokemon-evolution">
                   <div class="evolution-wrapper"></div>
                 </div>
