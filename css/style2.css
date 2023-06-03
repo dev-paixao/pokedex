@@ -272,8 +272,31 @@ main {
   flex-wrap: wrap;
 }
 
-.pokemon-info-row p {
+.pokemon-info-row div {
   flex: 1 0 33.33%;
+}
+
+.hp-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hp-hearts {
+  display: flex;
+  align-items: center;
+}
+
+.hp-heart {
+  color: #ccc;
+  margin-right: 4px;
+}
+
+.hp-heart:last-child {
+  margin-right: 0;
+}
+
+.hp-heart.active {
+  color: red;
 }
 
 /* Estilos para a mensagem de "Loading" */

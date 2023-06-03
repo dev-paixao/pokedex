@@ -170,36 +170,65 @@ const renderPokemon = async (pokemon) => {
 
     // Exibir as informações de HP, Height e Weight
     pokemonStats.style.display = 'block';
-    pokemonHP.textContent = data.stats.find(stat => stat.stat.name === 'hp').base_stat;
-    pokemonHeight.textContent = data.height;
-    pokemonWeight.textContent = data.weight;
+
+    const hpValue = data.stats.find(stat => stat.stat.name === 'hp').base_stat;
+    const hpHearts = Math.ceil(hpValue / 20); // Calcular o número de corações baseado no HP
+    const numHearts = 5; // Exibir sempre 5 corações
+    pokemonHP.innerHTML = ''; // Limpar o conteúdo atual
+
+    for (let i = 0; i < numHearts; i++) {
+      const heartIcon = document.createElement('i');
+      heartIcon.classList.add('fas', 'fa-heart', 'heart-icon');
+      
+      if (i < hpHearts) {
+        heartIcon.style.color = 'red'; // Alterar a cor para vermelho para corações preenchidos
+      }
+
+      pokemonHP.appendChild(heartIcon);
+    }
+
+    // Converter o Height e o Weight para metros e quilogramas
+    pokemonHeight.textContent = `${data.height / 10} m`;
+    pokemonWeight.textContent = `${data.weight / 10} kg`;
 
   } else {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Not found :c';
     pokemonNumber.innerHTML = '';
+    pokemonTypesList.innerHTML = '';
+    pokemonAbilitiesList.innerHTML = '';
+    pokemonEvolution.innerHTML = '';
+    pokemonDescription.textContent = '';
+    pokemonStats.style.display = 'none';
   }
-}
+};
 
-// Função para lidar com o envio do formulário de pesquisa
-form.addEventListener('submit', (event) => {
+// Função para lidar com o evento de envio do formulário
+const handleFormSubmit = (event) => {
   event.preventDefault();
-  renderPokemon(input.value.toLowerCase());
-});
+  const searchValue = input.value.toLowerCase();
+  renderPokemon(searchValue);
+};
 
-// Função para lidar com o clique no botão "Prev"
-buttonPrev.addEventListener('click', () => {
-  if (searchPokemon > 1) {
-    searchPokemon -= 1;
-    renderPokemon(searchPokemon);
+// Função para lidar com o evento do botão "Anterior"
+const handlePrevClick = () => {
+  searchPokemon--;
+  if (searchPokemon < 1) {
+    searchPokemon = 1;
   }
-});
-
-// Função para lidar com o clique no botão "Next"
-buttonNext.addEventListener('click', () => {
-  searchPokemon += 1;
   renderPokemon(searchPokemon);
-});
+};
 
-// Renderizar o Pokémon inicial ao carregar a página
+// Função para lidar com o evento do botão "Próximo"
+const handleNextClick = () => {
+  searchPokemon++;
+  renderPokemon(searchPokemon);
+};
+
+// Adicionar os event listeners aos elementos
+form.addEventListener('submit', handleFormSubmit);
+buttonPrev.addEventListener('click', handlePrevClick);
+buttonNext.addEventListener('click', handleNextClick);
+
+// Renderizar o primeiro Pokémon ao carregar a página
 renderPokemon(searchPokemon);
