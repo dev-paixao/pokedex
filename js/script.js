@@ -1,6 +1,5 @@
 // Selecionando os elementos HTML
 const pokemonName = document.querySelector('.pokemon-name');
-const pokemonNumber = document.querySelector('.pokemon-id');
 const pokemonImage = document.querySelector('.pokemon-img');
 const pokemonEvolution = document.querySelector('.pokemon-evolution');
 const pokemonAbilitiesList = document.querySelector('.pokemon-abilities');
@@ -74,14 +73,12 @@ const fetchPokemonSprite = async (pokemonId) => {
 // Função para renderizar os dados do Pokémon na página
 const renderPokemon = async (pokemon) => {
   pokemonName.innerHTML = 'Loading...';
-  pokemonNumber.innerHTML = '';
 
   const data = await fetchPokemon(pokemon);
 
   if (data) {
     pokemonImage.style.display = 'block';
     pokemonName.innerHTML = data.name;
-    pokemonNumber.innerHTML = data.id;
     pokemonImage.src = data.sprites.other['official-artwork'].front_default;
 
     pokemonTypesList.innerHTML = '';
@@ -155,7 +152,7 @@ const renderPokemon = async (pokemon) => {
       pokemonEvolution.innerHTML = '';
       const evolutionWrapper = document.createElement('div');
       evolutionWrapper.classList.add('evolution-wrapper');
-      evolutionWrapper.innerHTML = evolutions.join(' ');
+      evolutionWrapper.innerHTML = evolutions.join('>');
       pokemonEvolution.appendChild(evolutionWrapper);
     } else {
       pokemonEvolution.innerHTML = 'No evolution data available.';
@@ -194,7 +191,6 @@ const renderPokemon = async (pokemon) => {
   } else {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Not found :c';
-    pokemonNumber.innerHTML = '';
     pokemonTypesList.innerHTML = '';
     pokemonAbilitiesList.innerHTML = '';
     pokemonEvolution.innerHTML = '';

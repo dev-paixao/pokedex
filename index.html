@@ -13,15 +13,22 @@
         <section id="main-content">
 
             <section id="form-section">
+                
+                <div class="title-container">
                 <h1 class="title_content">PokeGuide</h1>
+                </div>
 
-                <form class="form">
-                    <input type="search" id="input-search" class="input-search" placeholder="Pesquise o nome ou número" required aria-label="Pesquisar Pokémon" />
+                <div class="form-container">
+                    <form class="form">
+                        <input type="search" id="input-search" class="input-search" placeholder="Pesquise o nome ou número" required aria-label="Pesquisar Pokémon" />
 
-                    <button type="submit" class="btn-search" aria-label="Pesquisar">
+                        <button type="submit" class="btn-search" aria-label="Pesquisar">
                         <img class="icon-search" src="img/Poké_Ball_icon.svg.png" alt="Ícone de Pesquisa" />
                     </button>
                 </form>
+                
+                </div>
+                
             </section>
 
             <section id="result-section">
@@ -40,7 +47,6 @@
 
                     <div class="name-pokemon">
                         <h2>
-                            <span class="pokemon-id"></span> -
                             <span class="pokemon-name"></span>
                         </h2>
 
@@ -87,7 +93,7 @@
             </section>
 
             <section id="evolution-section">
-                <h2 class="title-item"><i class="fa-solid fa-arrow-right"></i>Evoluções</h2>
+                <h2>Evoluções</h2>
                 <div class="pokemon-evolution">
                   <div class="evolution-wrapper"></div>
                 </div>
